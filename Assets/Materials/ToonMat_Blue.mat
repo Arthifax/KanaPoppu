@@ -278,7 +278,7 @@ Material:
     - __dummy__: 0
     - __outline_gui_dummy__: 0
     m_Colors:
-    - _BaseColor: {r: 0.22801706, g: 0.5258176, b: 0.7924528, a: 1}
+    - _BaseColor: {r: 0.1745283, g: 0.43003166, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0.12971698, g: 0.30433586, b: 0.5188679, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
