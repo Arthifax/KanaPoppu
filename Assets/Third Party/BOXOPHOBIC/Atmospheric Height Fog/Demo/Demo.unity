@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 16a9d8f314850e9438cfbb06af772c50,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -151,10 +154,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -179,6 +184,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &11233354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -210,6 +216,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6899996, y: 3.6, z: 10.63}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 4
@@ -244,10 +251,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -272,6 +281,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &72749736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -303,67 +313,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.610001, y: 2.03, z: -2.6899996}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &180642472
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Local
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _DIRECTIONALL: 1
-    - _DirectionalCustom: 0
-    - _DirectionalFalloff: 1
-    - _DirectionalIntensity: 1
-    - _DirectionalMode: 1
-    - _DirectionalModeBlend: 1
-    - _FOGG: 1
-    - _FogAxisMode: 1
-    - _FogColorDuo: 1
-    - _FogDistanceEnd: 60
-    - _FogDistanceFalloff: 1
-    - _FogDistanceStart: -60
-    - _FogHeightEnd: 15
-    - _FogHeightFalloff: 1
-    - _FogHeightStart: 0
-    - _FogIntensity: 1
-    - _IsHeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _IsHeightFogShader1: 50
-    - _IsStandardPipeline: 0
-    - _NOISEE: 1
-    - _NoiseDistanceEnd: 30
-    - _NoiseIntensity: 1
-    - _NoiseMode: 2
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SKYBOXX: 1
-    - _SkyboxFogFalloff: 1
-    - _SkyboxFogFill: 0
-    - _SkyboxFogHeight: 1
-    - _TITLE: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
-    - _DirectionalCustomDir: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8862745, g: 1.1921569, b: 1.4980392, a: 1}
-    - _FogColorStart: {r: 0, g: 0.58431387, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
 --- !u!1 &198716445
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,10 +348,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -422,6 +378,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &198716447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -453,6 +410,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.6199994, y: 3.6, z: 3.1500006}
   m_LocalScale: {x: 1.6679407, y: 28.277355, z: 1.6098938}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 5
@@ -487,10 +445,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -515,6 +475,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &209300867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -546,6 +507,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.4300003, y: 3.6, z: 6.450001}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 10
@@ -580,10 +542,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -608,6 +572,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &215077022
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -618,9 +583,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &215077023
 MeshFilter:
@@ -640,6 +605,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 500, y: 500, z: 500}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 0
@@ -674,10 +640,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -702,6 +670,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &254091903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -733,10 +702,70 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.01, y: 3.6, z: -10.0199995}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &541231867
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Override
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Banner: 1
+    - _DirectionalCat: 1
+    - _DirectionalFalloff: 2
+    - _DirectionalIntensity: 1
+    - _FogAxisMode: 1
+    - _FogCat: 1
+    - _FogColorDuo: 1
+    - _FogDistanceEnd: 200
+    - _FogDistanceFalloff: 2
+    - _FogDistanceStart: -200
+    - _FogHeightEnd: 200
+    - _FogHeightFalloff: 2
+    - _FogHeightStart: 0
+    - _FogIntensity: 1
+    - _FogLayersMode: 0
+    - _IsHeightFogPreset: 1
+    - _IsHeightFogShader: 1
+    - _NoiseCat: 1
+    - _NoiseDistanceEnd: 50
+    - _NoiseIntensity: 1
+    - _NoiseModeBlend: 1
+    - _NoiseScale: 30
+    - _SkyboxCat: 1
+    - _SkyboxFogBottom: 0
+    - _SkyboxFogFalloff: 1
+    - _SkyboxFogFill: 1
+    - _SkyboxFogHeight: 1
+    - _SkyboxFogIntensity: 1
+    - _SkyboxFogOffset: 0
+    m_Colors:
+    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
+    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
+    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
+    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
+    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &554100114
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,10 +796,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -795,6 +826,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &554100116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -826,10 +858,46 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.4, y: 0.58, z: 2.09}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &649013108
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Height Fog Global
+  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AdvancedCat: 1
+    - _AlphaCutoff: 0.5
+    - _Banner: 1
+    - _DirectionalCat: 1
+    - _FogAxisMode: 1
+    - _FogCat: 1
+    - _HeightFogGlobal: 1
+    - _IsHeightFogShader: 1
+    - _NoiseCat: 1
+    - _SkyboxCat: 1
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &811676577
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +974,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &811676579
@@ -918,6 +987,7 @@ Transform:
   m_LocalRotation: {x: 0.0858581, y: 0.58688194, z: -0.11686627, w: 0.7965804}
   m_LocalPosition: {x: 0, y: 18.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -950,6 +1020,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
   m_LocalPosition: {x: 0, y: 0, z: 4.78}
   m_LocalScale: {x: 0.031017363, y: 0.031017363, z: 0.31017363}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1214462678}
   m_RootOrder: 0
@@ -974,6 +1045,8 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: ee4604e1a289ca3469987c3c71dc9092, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1032,6 +1105,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.13, y: 2.85, z: 6.75}
   m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 12
@@ -1047,10 +1121,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1075,6 +1151,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &900392379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1096,34 +1173,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900392376}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &959311368
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Height Fog Global
-  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3101
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _AlphaCutoff: 0.5
-    - _HeightFogGlobal: 1
-    - _IsHeightFogShader: 1
-    - _IsUniversalPipeline: 0
-    - _TITLE: 1
-    - _TransparentQueue: 3000
-    m_Colors:
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1026953692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1202,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.3, y: 3.6, z: -27.5}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 14
@@ -1168,10 +1218,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1196,6 +1248,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1026953695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1247,10 +1300,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1275,6 +1330,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1093170040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1306,6 +1362,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.38, y: 11.64, z: 3.38}
   m_LocalScale: {x: 3.5170665, y: 3.5170665, z: 3.5170665}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 11
@@ -1336,6 +1393,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 215077024}
   - {fileID: 1725981033}
@@ -1385,10 +1443,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1413,6 +1473,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1193642131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1444,6 +1505,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.24, y: 3.6, z: -8.26}
   m_LocalScale: {x: 1.1465, y: 13.693777, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 9
@@ -1506,6 +1568,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1214462677
 Canvas:
   m_ObjectHideFlags: 0
@@ -1537,6 +1600,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 888984249}
   m_Father: {fileID: 0}
@@ -1547,120 +1611,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!21 &1351033798
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Blend
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _DIRECTIONALL: 1
-    - _DirectionalCustom: 0
-    - _DirectionalFalloff: 1
-    - _DirectionalIntensity: 1
-    - _DirectionalMode: 1
-    - _DirectionalModeBlend: 1
-    - _FOGG: 1
-    - _FogAxisMode: 1
-    - _FogColorDuo: 1
-    - _FogDistanceEnd: 60
-    - _FogDistanceFalloff: 1
-    - _FogDistanceStart: -60
-    - _FogHeightEnd: 15
-    - _FogHeightFalloff: 1
-    - _FogHeightStart: 0
-    - _FogIntensity: 1
-    - _IsHeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _IsHeightFogShader1: 50
-    - _IsStandardPipeline: 0
-    - _NOISEE: 1
-    - _NoiseDistanceEnd: 30
-    - _NoiseIntensity: 1
-    - _NoiseMode: 2
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SKYBOXX: 1
-    - _SkyboxFogFalloff: 1
-    - _SkyboxFogFill: 0
-    - _SkyboxFogHeight: 1
-    - _TITLE: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
-    - _DirectionalCustomDir: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8862745, g: 1.1921569, b: 1.4980392, a: 1}
-    - _FogColorStart: {r: 0, g: 0.58431387, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
---- !u!21 &1622021856
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Override
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _DIRECTIONALL: 1
-    - _DirectionalCustom: 0
-    - _DirectionalFalloff: 2
-    - _DirectionalIntensity: 1
-    - _DirectionalMode: 1
-    - _DirectionalModeBlend: 1
-    - _FOGG: 1
-    - _FogAxisMode: 1
-    - _FogColorDuo: 1
-    - _FogDistanceEnd: 200
-    - _FogDistanceFalloff: 2
-    - _FogDistanceStart: -200
-    - _FogHeightEnd: 200
-    - _FogHeightFalloff: 2
-    - _FogHeightStart: 0
-    - _FogIntensity: 1
-    - _IsHeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _IsHeightFogShader1: 50
-    - _IsStandardPipeline: 0
-    - _NOISEE: 1
-    - _NoiseDistanceEnd: 50
-    - _NoiseIntensity: 1
-    - _NoiseMode: 2
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SKYBOXX: 1
-    - _SkyboxFogFalloff: 1
-    - _SkyboxFogFill: 1
-    - _SkyboxFogHeight: 1
-    - _TITLE: 1
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
-    - _DirectionalCustomDir: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
-    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
 --- !u!1 &1624396182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,10 +1641,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1719,6 +1671,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1624396184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1750,6 +1703,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.34, y: 3.6, z: -3.42}
   m_LocalScale: {x: 1.6679407, y: 19.921856, z: 1.6098938}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 6
@@ -1784,10 +1738,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1812,6 +1768,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1682881879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1843,6 +1800,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.5199995, y: 3.6, z: -4.7799993}
   m_LocalScale: {x: 1.1465, y: 21.848833, z: 1.1066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 8
@@ -1877,10 +1835,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1905,6 +1865,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1725981031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1936,6 +1897,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.9900007, y: 3.6, z: 0.45000076}
   m_LocalScale: {x: 1.6679407, y: 24.81707, z: 1.6098938}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 1
@@ -1974,10 +1936,19 @@ MonoBehaviour:
   styledBanner: 0
   categoryScene: 0
   mainCamera: {fileID: 1937196293}
-  mainDirectional: {fileID: 0}
+  mainDirectional: {fileID: 811676578}
+  categoryMode: 0
+  fogMode: 10
+  messagePreset: 0
+  messageTimeOfDay: 0
+  presetMaterial: {fileID: 0}
+  presetDay: {fileID: 0}
+  presetNight: {fileID: 0}
+  timeOfDay: 0
   categoryFog: 0
   fogIntensity: 1
   fogAxisMode: 1
+  fogLayersMode: 10
   fogColorStart: {r: 0, g: 0.58431387, b: 1, a: 1}
   fogColorEnd: {r: 0.8862745, g: 1.1921569, b: 1.4980392, a: 1}
   fogColorDuo: 1
@@ -1988,30 +1959,29 @@ MonoBehaviour:
   fogHeightEnd: 15
   fogHeightFalloff: 1
   categorySkybox: 0
+  skyboxFogIntensity: 1
   skyboxFogHeight: 1
   skyboxFogFalloff: 1
+  skyboxFogOffset: 0
+  skyboxFogBottom: 0
   skyboxFogFill: 0
   categoryDirectional: 0
-  directionalMode: 1
   directionalIntensity: 1
   directionalFalloff: 1
   directionalColor: {r: 1, g: 0.53189665, b: 0.25, a: 1}
   categoryNoise: 0
-  noiseMode: 3
   noiseIntensity: 1
   noiseDistanceEnd: 30
   noiseScale: 30
   noiseSpeed: {x: 0.5, y: 0.5, z: 0}
   categoryAdvanced: 0
+  manualPositionAndScale: 0
   renderPriority: 1
   styledSpace0: 0
-  localMaterial: {fileID: 180642472}
-  overrideMaterial: {fileID: 1622021856}
-  blendMaterial: {fileID: 1351033798}
-  heightFogMaterial: {fileID: 959311368}
+  overrideMaterial: {fileID: 541231867}
   overrideCamToVolumeDistance: Infinity
   overrideVolumeDistanceFade: 0
-  updater: 0
+  version: 0
 --- !u!23 &1790950448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2023,14 +1993,16 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 959311368}
+  - {fileID: 649013108}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2051,6 +2023,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1790950449
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2067,8 +2040,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790950446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 50}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 999, y: 999, z: 999}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2094,7 +2068,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &1937196290
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2107,6 +2081,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -2127,18 +2102,20 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 1
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -2195,6 +2172,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 6, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2233,13 +2211,22 @@ MonoBehaviour:
   messageNoHeightFogGlobal: 0
   categoryVolume: 0
   volumeDistanceFade: 15
-  volumeVisibility: 0.1
+  volumeGizmoColor: {r: 1, g: 1, b: 1, a: 1}
   categoryScene: 0
   mainCamera: {fileID: 1937196293}
   mainDirectional: {fileID: 0}
+  categoryMode: 0
+  fogMode: 10
+  messagePreset: 0
+  messageTimeOfDay: 0
+  presetMaterial: {fileID: 0}
+  presetDay: {fileID: 0}
+  presetNight: {fileID: 0}
+  timeOfDay: 0
   categoryFog: 0
   fogIntensity: 1
   fogAxisMode: 1
+  fogLayersMode: 10
   fogColorStart: {r: 0, g: 0.35294116, b: 0.060851935, a: 1}
   fogColorEnd: {r: 0.942268, g: 1.7633113, b: 0.39092276, a: 1}
   fogColorDuo: 1
@@ -2250,21 +2237,23 @@ MonoBehaviour:
   fogHeightEnd: 15
   fogHeightFalloff: 1
   categorySkybox: 0
+  skyboxFogIntensity: 1
   skyboxFogHeight: 1
   skyboxFogFalloff: 1
+  skyboxFogOffset: 0
+  skyboxFogBottom: 0
   skyboxFogFill: 0
   categoryDirectional: 0
-  directionalMode: 1
   directionalIntensity: 1
   directionalFalloff: 1
   directionalColor: {r: 0.52045554, g: 0.74264705, b: 0.098291524, a: 1}
   categoryNoise: 0
-  noiseMode: 3
   noiseIntensity: 0.5
   noiseDistanceEnd: 30
   noiseScale: 30
   noiseSpeed: {x: 0.5, y: 0.5, z: 0}
   styledSpace0: 0
+  version: 0
 --- !u!65 &2067033083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2288,6 +2277,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2321,6 +2311,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.18, y: 26.04, z: -7.62}
   m_LocalScale: {x: 2.2562332, y: 2.2562332, z: 2.2562332}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151496510}
   m_RootOrder: 13
@@ -2336,10 +2327,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2364,6 +2357,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2079128178
 BoxCollider:
   m_ObjectHideFlags: 0
